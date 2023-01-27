@@ -1,3 +1,6 @@
+/* header font */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Solway:wght@400;500;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,5 +9,10 @@
   html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-black text-white font-primary;
+    height: 100vh;
   }
 }

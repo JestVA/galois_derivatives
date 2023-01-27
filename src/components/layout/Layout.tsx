@@ -9,7 +9,7 @@ type Props = {
 const Layout: React.FC<Props> = (props) => {
     return <>
         <MainNavigation />
-        <main>{props.children}</main>
+        <main className='m-10 lg:mx-20 xl:mx-[15%]'>{props.children}</main>
         <Footer />
     </>
 }
