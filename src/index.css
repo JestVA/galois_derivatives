@@ -5,6 +5,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Astrella";
+  src: url("../public/fonts/Astrella.otf");
+}
+
+@font-face {
+  font-family: 'MangaBey';
+  src: url("../public/fonts/MangabeyRegular-rgqVO.otf")
+}
+
+
 @layer base {
   html {
     -moz-osx-font-smoothing: grayscale;
@@ -13,6 +24,36 @@
 
   body {
     @apply bg-black text-white font-primary;
-    height: 100vh;
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .heading-background {
+    @apply bg-gradient-to-r from-[#FFC6D3] to-[#3A4F7A];
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+
+  .image {
+    @apply rounded-full max-w-[60%] overflow-hidden my-10
+  }
+
+  .post {
+    @apply text-background p-7 rounded-xl shadow-md shadow-green-200
+  }
+
+  .text-background {
+    background: hsla(229, 73%, 19%, 0.322);
+    backdrop-filter: blur(20px);
+    z-index: 1;
   }
 }
