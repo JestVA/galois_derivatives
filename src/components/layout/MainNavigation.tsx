@@ -2,16 +2,22 @@ import Logo from './Logo.jsx'
 import { NavLink, Link } from 'react-router-dom'
 
 const MainNavigation = () => {
-    const activeClass = 'border-b-2 border-gray-300'
-    const linkClass = 'hover:border-b-2 border-gray-300'
-    return <nav className='grid grid-cols-3 p-4 '>
-        <Link to='/' className='mr-3'><Logo /></Link>
-        <ul className='flex flex-row gap-8 text-lg font-semibold justify-center'>
-            <li><NavLink to='/' className={(navData) => navData.isActive ? activeClass : linkClass}>Home</NavLink></li>
-            <li><NavLink to='/about' className={(navData) => navData.isActive ? activeClass : linkClass}>About</NavLink></li>
-            <li><NavLink to='/optics' className={(navData) => navData.isActive ? activeClass : linkClass}>Optics</NavLink></li>
-        </ul>
-        <div></div>
+    const activeClass = 'bg-primary text-green font-nav px-3 py-1 text-[30px] '
+    const linkClass = 'font-nav px-3 py-1 text-[30px] hover:bg-primary hover:text-green'
+    const navLinks = [
+        ['Home', '/',],
+        ['About', '/about'],
+        ['Optics', '/optics']
+    ].map(([title, url]) => (
+        <NavLink to={url} className={linkData => linkData.isActive ? activeClass : linkClass}> {title} </NavLink>
+    ))
+    return <nav className='p-4 flex justify-between items-center'>
+        <Link to='/' className='mr-3 scale-[140%]'><Logo /></Link>
+        <div className='flex justify-center gap-3'>
+            {navLinks[0]}
+            {navLinks[1]}
+        </div>
+        {navLinks[2]}
     </nav>
 }
 

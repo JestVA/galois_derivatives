@@ -4,10 +4,14 @@ module.exports = {
   plugins: [],
   theme: {
     fontFamily: {
-      'heading': 'Fjalla One, sans-serif',
-      // 'heading': 'Astrella',
-      'primary': 'Solway, serif'
-      // 'primary': 'MangaBey'
+      'heading': 'Astrella',
+      'sub-heading': 'MangaBey',
+      'main-content': 'Asul',
+      'nav': 'Marcellus'
+    },
+    colors: {
+      'primary': '#76806F',
+      'green': '#E5FFFF'
     }
   }
 };
