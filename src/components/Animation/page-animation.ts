@@ -7,7 +7,7 @@ export const pageTransitionOne = {
     in: {
         opacity: 1,
         x: 0
-    }
+    },
 }
 
 export const pageTransitionTwo = {

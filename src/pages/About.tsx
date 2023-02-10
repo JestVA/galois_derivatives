@@ -5,7 +5,7 @@ import { pageTransitionTwo } from '../components/Animation/page-animation'
 
 const About = () => {
     return (
-        <motion.div initial='out' animate='in' exit='out' variants={pageTransitionTwo} transition={{ type: "spring", stiffness: 100 }}>
+        <motion.div initial='out' animate='in' exit='out' variants={pageTransitionTwo}>
             <Team />
         </motion.div>
     )
