@@ -9,7 +9,7 @@ type Props = {
 
 const Layout: React.FC<Props> = (props) => {
     return (
-        <div className='bg-[#E5FFFF] flex flex-col justify-between min-h-screen '>
+        <div className='bg-[#E5FFFF] flex flex-col justify-between min-h-screen w-[1276px] '>
             <div>
                 <Header />
                 <MainNavigation />

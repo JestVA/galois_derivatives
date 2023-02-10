@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'heading': 'Astrella',
-      'sub-heading': 'MangaBey',
+      'sub-heading': 'Retrophilia',
       'main-content': 'Asul',
       'nav': 'Marcellus'
     },

@@ -1,7 +1,12 @@
 import Layout from "../components/layout/Layout"
+import Team from '../components/main/Team'
+
 
 const About = () => {
-    return <Layout> <p>About us</p> </Layout>
+
+    return <Layout>
+        <Team />
+    </Layout>
 }
 
 export default About

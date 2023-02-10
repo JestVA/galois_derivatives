@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
+import Card from "../UI/Card"
 
 const Summary = () => {
-    return <div className="grid grid-cols-2 items-center border-4 rounded-[5px] py-[63px] px-[25px]">
+    return <Card className="grid grid-cols-2">
         <div className="px-[25px] border-r-[1px] border-primary">
             <p className="font-main-content whitespace-pre-wrap text-[24px] text-center">
                 Galois Derivatives is a proprietary hedge fund utilizing advanced technology and quantitative strategies to trade crypto futures contracts.
@@ -9,9 +10,9 @@ const Summary = () => {
             </p>
         </div>
         <div>
-            <img src='../../public/green_recolour_transparent.png' />
+            <img className="margin-auto" src='../../public/green_recolour_transparent.png' />
         </div>
-    </div>
+    </Card>
 }
 
 export default Summary
