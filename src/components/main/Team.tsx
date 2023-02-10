@@ -2,9 +2,9 @@ import Card from "../UI/Card"
 
 const Team = () => {
     const teamMembers = [
-        ['/public/profile/Dorin.png', 'Dorin Dumitrascuta', 'CTO'],
-        ['/public/profile/Garnet.png', 'Garnet Ni', 'Frontend Developer']
-    ].map(([url, name, title], index) => (
+        ['/profile/Dorin.png', 'Dorin Dumitrascuta', 'CTO'],
+        ['/profile/Garnet.png', 'Garnet Ni', 'Frontend Developer']
+    ].map(([url, name, title]) => (
         <div>
             <img className="w-[200px] h-[200px] rounded-full m-auto" src={`${url}`} alt={`${name} profile`} />
             <div className="pt-2 text-center">

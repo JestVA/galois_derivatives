@@ -14,7 +14,7 @@ const Layout: React.FC<Props> = (props) => {
                 <Header />
                 <MainNavigation />
             </div>
-            <main className='px-[135px] py-[25px]'>{props.children}</main>
+            <main className='px-[135px] py-[25px] overflow-hidden'>{props.children}</main>
             <Footer />
         </div>
     )
