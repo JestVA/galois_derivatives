@@ -16,7 +16,13 @@ const Summary = () => {
         refetchOnWindowFocus: false,
     })
 
+    if (response.status === 'error') console.log(response)
+
+
+
     return <Card className="grid grid-cols-2 items-center">
+
+        {/* sometimes the animation doesn't work, don't know why */}
         <motion.div
             className="px-[25px]"
             initial={{ opacity: 0 }}
@@ -27,11 +33,12 @@ const Summary = () => {
                 <p className="text-[24px]">Generating description...</p>}
 
             {response.status === 'error' &&
-                <p>{JSON.stringify(response.error)}</p>}
+                <p>{JSON.stringify(response)}</p>}
 
 
             <p className="font-main-content whitespace-pre-wrap px-3 text-[24px] text-center">{response.data}</p>
 
+            {/* old description */}
             {/* <p className="font-main-content whitespace-pre-wrap text-[24px] text-center">
                     Galois Derivatives is a proprietary hedge fund utilizing advanced technology and quantitative strategies to trade crypto futures contracts.
                     The fund has been successfully trading XBTUSD inverse perpetual contract on BitMEX since 2021 and in 2023 it has deployed the algorithm to trade the BTCUSDT linear contract. The fund's performance can be accessed on our <Link to='/optics' className="underline hover:activeClass">/optics</Link>

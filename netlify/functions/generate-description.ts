@@ -1,8 +1,8 @@
-import { Handler, HandlerEvent, HandlerContext, HandlerCallback } from '@netlify/functions'
+import { Handler, HandlerEvent, HandlerContext } from '@netlify/functions'
 import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
-    apiKey: process.env.VITE_OPENAI_API_KEY,
+    // apiKey: process.env.VITE_OPENAI_API_KEY,
 });
 
 const openai = new OpenAIApi(configuration);
@@ -13,6 +13,13 @@ Example: Galois Derivatives is a proprietary hedge fund utilizing advanced techn
 Your answer:`
 
 const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
+    if (!configuration.apiKey) {
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ error: true, message: 'API key wrong' })
+        }
+    }
+
     try {
         const completion = await openai.createCompletion({
             model: "text-davinci-003",
@@ -29,12 +36,12 @@ const handler: Handler = async (event: HandlerEvent, context: HandlerContext) =>
         if (err.response) {
             return {
                 statusCode: err.response.status,
-                body: JSON.stringify(err.response.data)
+                body: JSON.stringify({ error: true, message: err.response.data })
             }
         } else {
             return {
                 statusCode: 500,
-                body: JSON.stringify({ error: { message: 'an error occurd' } })
+                body: JSON.stringify({ error: true, message: 'an error occurd' })
             }
         }
     }
