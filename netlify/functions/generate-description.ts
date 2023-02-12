@@ -2,7 +2,7 @@ import { Handler, HandlerEvent, HandlerContext } from '@netlify/functions'
 import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
-    // apiKey: process.env.VITE_OPENAI_API_KEY,
+    apiKey: process.env.VITE_OPENAI_API_KEY,
 });
 
 const openai = new OpenAIApi(configuration);

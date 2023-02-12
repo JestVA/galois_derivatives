@@ -30,6 +30,7 @@ const Summary = () => {
             exit={{ opacity: 0 }}
         >
             {response.status === 'loading' &&
+                // todo: add loading animation 
                 <p className="text-[24px]">Generating description...</p>}
 
             {response.status === 'error' &&
