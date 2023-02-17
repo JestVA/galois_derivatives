@@ -1,18 +1,18 @@
 import { Handler, HandlerEvent, HandlerContext } from '@netlify/functions'
 import { Configuration, OpenAIApi } from "openai";
 
-const configuration = new Configuration({
-    apiKey: process.env.VITE_OPENAI_API_KEY,
-});
-
-const openai = new OpenAIApi(configuration);
-
 const promptContent = `Write a paragraph describing the company called Galois Derivatives.
 Example: Galois Derivatives is a proprietary hedge fund utilizing advanced technology and quantitative strategies to trade crypto futures contracts.
                 The fund has been successfully trading XBTUSD inverse perpetual contract on BitMEX since 2021 and in 2023 it has deployed the algorithm to trade the BTCUSDT linear contract.
 Your answer:`
 
 const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
+    const configuration = new Configuration({
+        apiKey: process.env.VITE_OPENAI_API_KEY,
+    });
+
+    const openai = new OpenAIApi(configuration);
+
     if (!configuration.apiKey) {
         return {
             statusCode: 500,
