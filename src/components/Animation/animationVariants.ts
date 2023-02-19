@@ -23,3 +23,12 @@ export const pageTransitionTwo: Variants = {
         x: 0
     }
 }
+
+export const fadeInOut: Variants = {
+    out: {
+        opacity: 0
+    },
+    in: {
+        opacity: 1
+    }
+}
