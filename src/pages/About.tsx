@@ -1,13 +1,13 @@
 import Team from '../components/main/Team'
-import { motion } from 'framer-motion'
+import WithAnimation from '../components/Animation/WithAnimation'
 import { pageTransitionTwo } from '../components/Animation/page-animation'
 
 
 const About = () => {
     return (
-        <motion.div initial='out' animate='in' exit='out' variants={pageTransitionTwo}>
+        <WithAnimation variants={pageTransitionTwo}>
             <Team />
-        </motion.div>
+        </WithAnimation>
     )
 }
 

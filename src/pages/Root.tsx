@@ -1,11 +1,11 @@
 import Summary from '../components/main/Summary'
-import { motion } from 'framer-motion'
+import WithAnimation from '../components/Animation/WithAnimation'
 import { pageTransitionOne } from '../components/Animation/page-animation'
 
 const Root = () => {
-    return <motion.div initial='out' animate='in' exit='out' variants={pageTransitionOne}>
+    return <WithAnimation variants={pageTransitionOne}>
         <Summary />
-    </motion.div>
+    </WithAnimation>
 }
 
 export default Root

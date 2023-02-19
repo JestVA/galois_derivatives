@@ -1,4 +1,6 @@
-export const pageTransitionOne = {
+import { Variants } from "framer-motion"
+
+export const pageTransitionOne: Variants = {
     out: {
         opacity: 0,
         x: '-100%',
@@ -10,7 +12,7 @@ export const pageTransitionOne = {
     },
 }
 
-export const pageTransitionTwo = {
+export const pageTransitionTwo: Variants = {
     out: {
         opacity: 0,
         x: '100%',
