@@ -7,7 +7,7 @@ const useDaVinciDescription = () => {
         return res.data
     }
 
-    const { data, status, error } = useQuery({
+    const { data, isLoading, isSuccess, isError, error } = useQuery({
         queryKey: ['description'],
         queryFn: fetchDescription,
         refetchOnMount: false,
@@ -16,9 +16,10 @@ const useDaVinciDescription = () => {
 
     return {
         description: data,
-        isError: status === 'error',
-        isLoading: status === 'loading',
-        error: error
+        isError,
+        isLoading,
+        isSuccess,
+        error,
     }
 }
 

@@ -1,4 +1,4 @@
-import Summary from '../components/main/Summary'
+import Summary from '../components/main/summary/Summary'
 import WithAnimation from '../components/Animation/WithAnimation'
 import { pageTransitionOne } from '../utils/animationVariants'
 
