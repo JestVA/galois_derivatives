@@ -1,6 +1,6 @@
 import Summary from '../components/main/Summary'
 import WithAnimation from '../components/Animation/WithAnimation'
-import { pageTransitionOne } from '../components/Animation/animationVariants'
+import { pageTransitionOne } from '../utils/animationVariants'
 
 const Root = () => {
     return <WithAnimation variants={pageTransitionOne}>

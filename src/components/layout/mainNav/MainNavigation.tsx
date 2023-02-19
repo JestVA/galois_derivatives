@@ -1,4 +1,4 @@
-import Logo from './Logo.jsx'
+import Logo from './Logo'
 import { NavLink, Link } from 'react-router-dom'
 
 const activeClass = 'bg-primary text-green font-nav px-3 py-1 text-[30px] '

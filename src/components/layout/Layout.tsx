@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
-import MainNavigation from './MainNavigation'
-import Footer from './Footer'
-import Header from './Header'
+import MainNavigation from './mainNav/MainNavigation'
+import Footer from './footer/Footer'
+import Header from './header/Header'
 
 type Props = {
     children?: ReactNode

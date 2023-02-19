@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { AnimatePresence } from 'framer-motion'
-import WithAnimation from "../Animation/WithAnimation"
-import { fadeInOut } from "../Animation/animationVariants"
+import Email from "./Email"
+import ContactUs from "./ContactUs"
+
 
 const Footer = () => {
     const [hover, setHover] = useState(false)
@@ -26,24 +27,10 @@ const Footer = () => {
                 >
                     <AnimatePresence mode='wait'>
                         {!hover && (
-                            <WithAnimation
-                                key='1'
-                                variants={fadeInOut}
-                            >
-                                <a href='mailto:hello@galois.cloud'>
-                                    Email: hello@galois.cloud
-                                </a>
-                            </WithAnimation>
+                            <Email key='1' />
                         )}
                         {hover && (
-                            <WithAnimation
-                                key='2'
-                                variants={fadeInOut}
-                            >
-                                <a href='mailto:hello@galois.cloud'>
-                                    Contact Us
-                                </a>
-                            </WithAnimation>
+                            <ContactUs key='2' />
                         )}
                     </AnimatePresence>
                 </div>
