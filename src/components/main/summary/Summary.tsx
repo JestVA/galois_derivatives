@@ -18,7 +18,7 @@ const Summary = () => {
             </AnimatePresence>
         </div>
         <div className="">
-            <img className="margin-auto" src='../../public/green_recolour_transparent.png' />
+            <img className="margin-auto" src='/green_recolour_transparent.png' />
         </div>
     </Card>
 }
