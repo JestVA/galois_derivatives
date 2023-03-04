@@ -2,25 +2,47 @@
 # See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
-jobs:
-  say-hello:
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
-    docker:
-      - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
-    steps:
-      - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+orbs: 
+  slack: circleci/slack@4.3.3 
+
+jobs: 
+  build: 
+    working_directory: ~/repo 
+    docker: 
+      - image: cimg/node:19.7.0 
+    steps: 
+      - checkout 
+      - run: 
+          name: Update NPM 
+          command: "sudo npm install -g npm@latest" 
+      - restore_cache: 
+          key: dependency-cache-{{ checksum "package-lock.json" }} 
+      - run: 
+          name: Install Dependencies 
+          command: npm install 
+      - save_cache: 
+          key: dependency-cache-{{ checksum "package-lock.json" }} 
+          paths: 
+            - ./node_modules 
+      - run: 
+          name: Build app 
+          command: npm run build
+      -  run:
+          name: Deploy to Netlify
+          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=dist
+      - slack/notify: 
+          event: fail 
+          mentions: '@channel' 
+          template: basic_fail_1 
+      - slack/notify: 
+          event: pass 
+          template: success_tagged_deploy_1       
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  say-hello-workflow:
+  build-and-notify:
     jobs:
-      - say-hello
+        - build:
+            context: slack  
+      

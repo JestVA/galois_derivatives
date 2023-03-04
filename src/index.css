@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Marcellus&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Astrella";
+  src: url("../public/fonts/Astrella.otf");
+}
+
+@font-face {
+  font-family: 'Retrophilia';
+  src: url("../public/fonts/Retrophilia.otf")
+}
+
+
+@layer base {
+  html {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-[#333319]
+  }
+
+  #root {
+    @apply m-auto w-full xl:w-[1336px] flex justify-center items-center px-[30px] py-[20px] text-primary min-h-screen;
+    box-sizing: border-box;
+    background-color: #333319;
+    opacity: 1;
+    background-image: linear-gradient(#E5FFFF 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(90deg, #E5FFFF 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(#ffffff 0.7000000000000001px, transparent 0.7000000000000001px), linear-gradient(90deg, #E5FFFF 0.7000000000000001px, #333319 0.7000000000000001px);
+    background-size: 35px 35px, 35px 35px, 7px 7px, 7px 7px;
+    background-position: -1.4000000000000001px -1.4000000000000001px, -1.4000000000000001px -1.4000000000000001px, -0.7000000000000001px -0.7000000000000001px, -0.7000000000000001px -0.7000000000000001px;
+  }
+
+}
+
+@layer components {
+  .card-background {
+    background-color: #333319;
+    opacity: 0.6;
+    background-image: linear-gradient(to right, #E5FFFF, #E5FFFF 2px, #333319 2px, #333319);
+    background-size: 4px 100%;
+  }
+
+  .activeClass {
+    @apply bg-primary text-green font-main-content
+  }
+}
+
+@layer components {}
