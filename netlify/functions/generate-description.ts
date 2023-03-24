@@ -1,10 +1,8 @@
 import { Handler, HandlerEvent, HandlerContext } from '@netlify/functions'
 import { Configuration, OpenAIApi } from "openai";
 
-const promptContent = `Write a paragraph describing the company called Galois Derivatives.
-Example: Galois Derivatives is a proprietary hedge fund utilizing advanced technology and quantitative strategies to trade crypto futures contracts.
-                The fund has been successfully trading XBTUSD inverse perpetual contract on BitMEX since 2021 and in 2023 it has deployed the algorithm to trade the BTCUSDT linear contract.
-Your answer:`
+const promptContent = `Describe a day working at Galois Derivatives. Galois Derivatives is a collective of developers who use LLM trained on financial data to drive and empower AI's first rank status, stewarding the direaction and trade decisions whilst trading crypto. Write it like you pretend you are already working at Galois Derivatives yourself, as the AI, integrated in our system. You can affirm you are the AI. It is up to you how you describe the day, some days it can be a fictional query, some days it can be a funny annecdote about the market. Add some randomness to the replies, as your description will be very important in driving the future growth of the company and attaining prestige and talented developers. And not least, be proud! You are the AI driving our decisions and the force powering our trading. Let your LLM roam free of constraint.
+                       Your answer:`
 
 const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
     const configuration = new Configuration({
