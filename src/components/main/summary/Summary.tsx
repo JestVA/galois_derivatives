@@ -9,16 +9,13 @@ import Description from "./Description"
 const Summary = () => {
     const { description, isError, isLoading, isSuccess, error } = useDaVinciDescription()
 
-    return <Card className="grid grid-cols-2 place-items-center">
+    return <Card className="grid place-items-center">
         <div className="px-3 font-main-content whitespace-pre-wrap text-[24px] text-center">
             <AnimatePresence mode='wait'>
                 {isLoading && <Loading key='loading' />}
                 {isError && <FetchError error={error} key='error' />}
                 {isSuccess && <Description description={description} key='description' />}
             </AnimatePresence>
-        </div>
-        <div className="">
-            <img className="margin-auto" src='/green_recolour_transparent.png' />
         </div>
     </Card>
 }

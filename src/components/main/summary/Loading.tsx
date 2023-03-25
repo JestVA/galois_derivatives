@@ -5,7 +5,7 @@ const Loading = () => {
     return <WithAnimation
         variants={fadeInOut}
     >
-        Generating Description...
+        devfrend@galois ~/ 🍣{'>'} Yuki, what did you do at work today?
     </WithAnimation>
 }
 

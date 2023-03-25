@@ -17,10 +17,6 @@ const navLinks: Link[] = [
     {
         title: 'About',
         url: '/about'
-    },
-    {
-        title: 'Optics',
-        url: '/optics'
     }
 ]
 
@@ -32,7 +28,7 @@ const MainNavigation = () => {
     console.log(navLinks)
 
     return (
-        <nav className='p-4 flex justify-between items-center'>
+        <nav className='px-6 flex justify-between items-center'>
             <Link to='/' className='mr-3 scale-[140%]'><Logo /></Link>
             <div className='flex justify-center gap-3'>
                 {navLinkComponents[0]}

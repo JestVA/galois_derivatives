@@ -4,14 +4,14 @@ module.exports = {
   plugins: [],
   theme: {
     fontFamily: {
-      'heading': 'Astrella',
-      'sub-heading': 'Retrophilia',
-      'main-content': 'Asul',
-      'nav': 'Marcellus'
+      'heading': 'Solway',
+      'sub-heading': 'Solway',
+      'main-content': 'Solway',
+      'nav': 'Solway'
     },
     colors: {
-      'primary': '#76806F',
-      'green': '#E5FFFF'
+      'primary': '#fbfb1e',
+      'green': '#1e3cfb'
     }
   }
 };

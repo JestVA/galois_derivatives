@@ -10,24 +10,24 @@ export const teamMembers: Member[] = [
         profile: '/profile/Dorin.png',
         name: 'Dorin Dumitrascuta',
         title: 'CTO',
-        bio: 'I train elephants how to wiggle their tail'
+        bio: 'A technologist at heart, I lead our team to new heights.'
     },
     {
         profile: '/profile/Garnet.png',
         name: 'Garnet Ni',
         title: 'Frontend Developer',
-        bio: 'I use React to develop front-end apps'
+        bio: 'I ensure our interface is as innovative as our technology. Oh, and origami.'
     },
     {
         profile: './profile/Hronir.png',
         name: 'Hrönir',
         title: 'Manager',
-        bio: 'I make sure nothing is lost in feature engineering & processing pipelines'
+        bio: 'A vigilant shepherd in the world of data.'
     },
     {
         profile: './profile/Ox.png',
         name: 'Ox',
         title: 'Data Scientist',
-        bio: 'Spend way too much time on Twitter. Sometimes I also find alpha.'
+        bio: 'Adept at mining Twitter gold, without a pickaxe.'
     }
 ]

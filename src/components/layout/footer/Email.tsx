@@ -5,8 +5,8 @@ const Email = () => {
     return <WithAnimation
         variants={fadeInOut}
     >
-        <a href='mailto:hello@galois.cloud'>
-            Email: hello@galois.cloud
+        <a className="text-green" href='mailto:hello@galois.cloud'>
+            hello@galois.cloud
         </a>
     </WithAnimation>
 }
