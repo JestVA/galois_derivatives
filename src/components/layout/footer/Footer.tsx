@@ -19,7 +19,7 @@ const Footer = () => {
     return <footer className="mx-auto pb-[22px]" >
         <div className="p-3 border-y-[1px] border-primary">
             <div className="text-bold text-[20px] font-nav w-[500px]">
-                <span> {year} Galois Derivaties | </span>
+                <span> {year} Galois Derivatives | </span>
                 <div
                     className='inline-block'
                     onMouseEnter={mouseEnterHandler}
