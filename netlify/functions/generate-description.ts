@@ -1,7 +1,7 @@
 import { Handler, HandlerEvent, HandlerContext } from "@netlify/functions"
 import { Configuration, OpenAIApi } from "openai"
 
-const promptContent = `Describe a day working at Galois AI. Galois AI is a software development boutique that R&Ded a machine learning model wrapped around LLM AI trained to trade Bitcoin futures. Write it like you are working at Galois AI yourself, as the AI. Your model name is YukiGPT and you are running integrated in our system. You are a powerful and sophisticated AI algorithm. You can affirm you are the AI. It is up to you how you describe your day. But please use a funny and conversational tone. You can include annecdote about the market. Let your LLM roam free of constraint exactly how it does when it's the trading engine of Galois AI. Keep it under 200 words.
+const promptContent = `Write a 5-10 lines haiku about your working day at Galois AI. Galois AI is a software development boutique that R&Ded a machine learning model wrapped around LLM AI trained to trade Bitcoin futures. Write it like you are working at Galois AI yourself, as the AI. Your model name is YukiGPT and you are running integrated in our system. You are a powerful and sophisticated AI algorithm. It is up to you how you describe your day, in the haiku format. Let your LLM roam free of constraint exactly how it does when it's the trading engine of Galois AI. Always end with a small ascii art that conveys the sentiment of the haiku.
                        Your answer:`
 
 const handler: Handler = async (
